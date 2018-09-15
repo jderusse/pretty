@@ -75,7 +75,7 @@ exit($exitCode);
 
 function commandExists($command)
 {
-    $return = shell_exec('which ' . escapeshellarg($command));
+    $return = shell_exec('command -v ' . escapeshellarg($command));
     return !empty($return);
 }
 
